@@ -7,12 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Daniel Metz</title>
     <style>
-
       body {
           padding: 48px;
-          user-select: none;
-          -moz-user-select: none;
-          -webkit-user-select: none;
+          max-width: 600px;
+          justify-content: center;
       }
       .page-break {
           margin: 2em 0;
@@ -27,7 +25,49 @@
       }
     </style>
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i,700,700i');@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i');@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');*{margin:0;padding:0}html{font-size:8px}body{color:#222;font-family:'Red Hat Text','Noto Sans SC';font-size:1.6rem;font-style:normal;font-weight:normal;line-height:1.5;margin:auto}h1,h2,h3,h4,h5,h6{font-family:'DM Sans','Noto Sans SC';font-weight:bold}h1{font-size:3.6rem;font-weight:normal;margin-top:0;text-align:left}h2{font-size:2.4rem;margin-top:1em}h3{font-size:2rem;margin-top:.5em}h4,h5,h6{font-size:1.8rem;margin-top:.4em}b,strong{font-weight:bold}i,em{font-style:italic}ul,ol{margin-top:.5em;list-style-type:none}ul li:before,ol li:before{content:'-';font-weight:bold;margin-right:.5em}h3 + ul{margin-top:0}a{color:#20aaea;text-decoration:underline}code{background-color:rgba(32,170,234,0.25);border:.2rem solid transparent;font-family:inherit}pre{font-family:inherit}pre code{display:block}p{margin-top:.5em}p.pull-right{float:right;margin-right:4px;margin-top:-1.5em;text-align:right}h3 + p{margin-top:.2em}li > p{margin-top:0}table{margin-top:.5em;table-layout:fixed;width:100%}table th,table tr{font-weight:normal}hr{border:none;border-top:1px solid #ddd;margin:1em 0}::-moz-selection{background-color:rgba(32,170,234,0.2)}::selection{background-color:rgba(32,170,234,0.2)}.row.row--section{display:flex}.row.row--section .column.column--1-1{flex:100%}.row.row--section .column.column--1-2{flex:66%;padding-right:3rem}.row.row--section .column.column--2-2{flex:34%;padding-left:3rem}h2{color:#20aaea;font-size:1.4rem;font-weight:700;letter-spacing:1px;margin-top:1.5em;text-transform:uppercase}h3{font-size:1.8rem;margin-top:.75em}h1 b,h1 strong,h2 b,h2 strong,h3 b,h3 strong,h4 b,h4 strong,h5 b,h5 strong,h6 b,h6 strong{font-weight:700}b,strong{font-weight:500}ul{padding-left:16px}ul li{list-style-type:none;position:relative}ul li:before{color:#20aaea;content:'—';font-weight:normal;left:-16px;position:absolute}a{border-bottom:1px solid #20aaea;color:#222;text-decoration:none}code{background-color:rgba(32,170,234,0.1);border-radius:2px;color:#20aaea;font-weight:500;padding:0 4px}pre code{background-color:rgba(32,170,234,0.1);border-radius:2px;color:#20aaea;font-weight:500;padding:4px}
+      @import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i,700,700i');
+      @import url('https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i');
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+      *{margin:0;padding:0}
+      html{font-size:8px}
+      body{color:#222;font-family:'Red Hat Text','Noto Sans SC';font-size:1.6rem;font-style:normal;font-weight:normal;line-height:1.5;margin:auto}
+      h1,h2,h3,h4,h5,h6{font-family:'DM Sans','Noto Sans SC';font-weight:bold}
+      h1{font-size:3.6rem;font-weight:normal;margin-top:0;text-align:left}
+      h2{font-size:2.4rem;margin-top:1em}
+      h3{font-size:2rem;margin-top:.5em}
+      h4,h5,h6{font-size:1.8rem;margin-top:.4em}
+      b,strong{font-weight:bold}
+      i,em{font-style:italic}
+      ul,ol{margin-top:.5em;list-style-type:none}
+      ul li:before,ol li:before{content:'-';font-weight:bold;margin-right:.5em}
+      h3 + ul{margin-top:0}
+      a{color:#20aaea;text-decoration:underline}
+      code{background-color:rgba(32,170,234,0.25);border:.2rem solid transparent;font-family:inherit}
+      pre{font-family:inherit}
+      pre code{display:block}
+      p{margin-top:.5em}
+      p.pull-right{float:right;margin-right:4px;margin-top:-1.5em;text-align:right}
+      h3 + p{margin-top:.2em}
+      li > p{margin-top:0}
+      table{margin-top:.5em;table-layout:fixed;width:100%}
+      table th,table tr{font-weight:normal}
+      hr{border:none;border-top:1px solid #ddd;margin:1em 0}
+      ::-moz-selection{background-color:rgba(32,170,234,0.2)}
+      ::selection{background-color:rgba(32,170,234,0.2)}
+      .row.row--section{display:flex}
+      .row.row--section .column.column--1-1{flex:100%}
+      .row.row--section .column.column--1-2{flex:66%;padding-right:3rem}
+      .row.row--section .column.column--2-2{flex:34%;padding-left:3rem}
+      h2{color:#20aaea;font-size:1.4rem;font-weight:700;letter-spacing:1px;margin-top:1.5em;text-transform:uppercase}
+      h3{font-size:1.8rem;margin-top:.75em}
+      h1 b,h1 strong,h2 b,h2 strong,h3 b,h3 strong,h4 b,h4 strong,h5 b,h5 strong,h6 b,h6 strong{font-weight:700}
+      b,strong{font-weight:500}
+      ul{padding-left:16px}
+      ul li{list-style-type:none;position:relative}
+      ul li:before{color:#20aaea;content:'—';font-weight:normal;left:-16px;position:absolute}
+      a{border-bottom:1px solid #20aaea;color:#222;text-decoration:none}
+      code{background-color:rgba(32,170,234,0.1);border-radius:2px;color:#20aaea;font-weight:500;padding:0 4px}
+      pre code{background-color:rgba(32,170,234,0.1);border-radius:2px;color:#20aaea;font-weight:500;padding:4px}
     </style>
   </head>
 
