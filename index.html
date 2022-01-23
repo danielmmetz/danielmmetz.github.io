@@ -12,21 +12,9 @@
         max-width: 600px;
         justify-content: center;
       }
-      .page-break {
-        margin: 2em 0;
-        border-bottom: 1px dashed #aaa;
-        border-top: 1px dashed #aaa;
-      }
-      .page-break:before {
-        color: #aaa;
-        content: 'Page Break';
-        display: block;
-        text-align: center;
-      }
       .section-header {
         padding-top: 10px;
       }
-
       .container {
         display: flex;
         flex-wrap: wrap;
@@ -53,12 +41,7 @@
         line-height: 1.5;
         margin: auto;
       }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
+      h1, h2, h3 {
         font-family: 'DM Sans', 'Noto Sans SC';
         font-weight: bold;
       }
@@ -68,29 +51,17 @@
         margin-top: 0;
         text-align: left;
       }
-      h2 {
-        font-size: 2.4rem;
-      }
       h3 {
         font-size: 2rem;
         margin-top: 0.5em;
       }
-      h4,
-      h5,
-      h6 {
-        font-size: 1.8rem;
-        margin-top: 0.4em;
-      }
-      b,
-      strong {
+      b, strong {
         font-weight: bold;
       }
-      i,
-      em {
+      i, em {
         font-style: italic;
       }
-      ul,
-      ol {
+      ul, ol {
         margin-top: 0.5em;
         list-style-type: none;
       }
@@ -107,18 +78,6 @@
         color: #20aaea;
         text-decoration: underline;
       }
-      code {
-        background-color: rgba(32, 170, 234, 0.25);
-        border: 0.2rem solid transparent;
-        font-family: inherit;
-      }
-      pre {
-        font-family: inherit;
-      }
-      pre code {
-        display: block;
-      }
-
       h3 + p {
         margin-top: 0.2em;
       }
@@ -165,27 +124,18 @@
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
+        margin-top: .3em;
       }
       h3 {
         font-size: 1.8rem;
         margin-top: 0.75em;
       }
-      h1 b,
-      h1 strong,
-      h2 b,
-      h2 strong,
-      h3 b,
-      h3 strong,
-      h4 b,
-      h4 strong,
-      h5 b,
-      h5 strong,
-      h6 b,
-      h6 strong {
+      h1 b, h1 strong,
+      h2 b, h2 strong,
+      h3 b, h3 strong {
         font-weight: 700;
       }
-      b,
-      strong {
+      b, strong {
         font-weight: 500;
       }
       ul {
@@ -206,20 +156,6 @@
         border-bottom: 1px solid #20aaea;
         color: #222;
         text-decoration: none;
-      }
-      code {
-        background-color: rgba(32, 170, 234, 0.1);
-        border-radius: 2px;
-        color: #20aaea;
-        font-weight: 500;
-        padding: 0 4px;
-      }
-      pre code {
-        background-color: rgba(32, 170, 234, 0.1);
-        border-radius: 2px;
-        color: #20aaea;
-        font-weight: 500;
-        padding: 4px;
       }
     </style>
   </head>
@@ -296,8 +232,10 @@
         </ul>
         <h1 class="section-header">Education</h1>
         <hr />
-        <p>Pomona College</p>
-        <p>Fall 2012 - Spring 2016</p>
+        <div class="container">
+            <p>Pomona College</p>
+            <p>Fall 2012 - Spring 2016</p>
+        </div>
         <ul>
           <li>B.A. in Mathematics, Computer Science | GPA 3.75</li>
         </ul>
