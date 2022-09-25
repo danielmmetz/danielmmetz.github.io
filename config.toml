@@ -1,4 +1,4 @@
-baseURL = 'https://www.danielmmetz.com/'
+baseURL = 'https://danielmmetz.com/'
 languageCode = 'en-us'
 title = 'Daniel Metz'
 theme = "personal"
