@@ -1,0 +1,4 @@
+baseURL = 'https://www.danielmmetz.com/'
+languageCode = 'en-us'
+title = 'Daniel Metz'
+theme = "personal"
