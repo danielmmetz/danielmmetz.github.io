@@ -16,7 +16,7 @@ jobs:
         with:
           hugo-version: '0.91.2'
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --noBuildLock
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
