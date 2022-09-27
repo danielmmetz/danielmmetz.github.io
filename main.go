@@ -152,7 +152,7 @@ func markdownify(s string) (string, error) {
 }
 
 func b64(b []byte) string {
-	return base64.URLEncoding.EncodeToString(b)
+	return base64.StdEncoding.EncodeToString(b)
 }
 
 type verboseLogger struct {
