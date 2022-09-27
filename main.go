@@ -3,8 +3,8 @@ package main
 import (
 	"bytes"
 	"context"
-	"embed"
-	"errors"
+	_ "embed"
+	"encoding/base64"
 	"flag"
 	"fmt"
 	"os"
@@ -18,8 +18,17 @@ import (
 	"github.com/yuin/goldmark"
 )
 
-//go:embed static/*
-var fs embed.FS
+var (
+
+	//go:embed embed/css.tmpl
+	cssTmplB string
+	//go:embed embed/DMSansRegular.ttf
+	dmSansRegular []byte
+	//go:embed embed/DMSansBold.ttf
+	dmSansBold []byte
+	//go:embed embed/RedHatTextRegular.ttf
+	redHatTextRegular []byte
+)
 
 func main() {
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
@@ -43,39 +52,50 @@ func mainE(_ context.Context) error {
 	minifier.AddFunc("text/html", html.Minify)
 	minifier.AddFunc("text/css", css.Minify)
 
+	cssTemplate := template.New("css").Funcs(map[string]any{"markdownify": markdownify, "base64": b64})
+	cssTmpl, err := cssTemplate.Parse(cssTmplB)
+	if err != nil {
+		return fmt.Errorf("parsing template: %w", err)
+	}
+	cssD := cssData{
+		DMSansRegular:     dmSansRegular,
+		DMSansBold:        dmSansBold,
+		RedHatTextRegular: redHatTextRegular,
+	}
+	var cssOut bytes.Buffer
+	if err := cssTmpl.Execute(&cssOut, cssD); err != nil {
+		return fmt.Errorf("executing template: %w", err)
+	}
+	if *shrink {
+		var tmp bytes.Buffer
+		if err := minifier.Minify("text/css", &tmp, &cssOut); err != nil {
+			return fmt.Errorf("minifying css: %w", err)
+		}
+		cssOut = tmp
+	}
+
 	contentB, err := os.ReadFile(*contentPath)
 	if err != nil {
 		return fmt.Errorf("reading content file: %s: %w", *contentPath, err)
 	}
-	var d data
+	var d htmlData
 	if err := yaml.Unmarshal(contentB, &d); err != nil {
 		return fmt.Errorf("parsing content: %w", err)
 	}
 	logger.Printf("config:\n%+v\n", d)
-	cssB, err := fs.ReadFile("static/main.css")
-	if err != nil && !errors.Is(err, os.ErrNotExist) {
-		return fmt.Errorf("read static/main.css: %w", err)
-	}
-	cssBuf := bytes.NewBuffer(cssB)
-	if *shrink {
-		var cssOut bytes.Buffer
-		if err := minifier.Minify("text/css", &cssOut, cssBuf); err != nil {
-			return fmt.Errorf("minifying css: %w", err)
-		}
-		cssBuf = &cssOut
-	}
-	d.Static.CSS = cssBuf.String()
+	d.Static.CSS = cssOut.String()
 
-	templateB, err := os.ReadFile(*templatePath)
+	htmlTemplate := template.New("html").Funcs(map[string]any{"markdownify": markdownify, "base64": b64})
+	htmlTemplateB, err := os.ReadFile(*templatePath)
 	if err != nil {
 		return fmt.Errorf("reading template file %s: %w", *templatePath, err)
 	}
-	template, err := template.New("template").Funcs(map[string]any{"markdownify": markdownify}).Parse(string(templateB))
+	tmpl, err := htmlTemplate.Parse(string(htmlTemplateB))
 	if err != nil {
 		return fmt.Errorf("parsing template: %w", err)
 	}
 	var out bytes.Buffer
-	if err := template.Execute(&out, d); err != nil {
+	if err := tmpl.Execute(&out, d); err != nil {
 		return fmt.Errorf("executing template: %w", err)
 	}
 	if *shrink {
@@ -89,7 +109,13 @@ func mainE(_ context.Context) error {
 	return nil
 }
 
-type data struct {
+type cssData struct {
+	DMSansRegular     []byte
+	DMSansBold        []byte
+	RedHatTextRegular []byte
+}
+
+type htmlData struct {
 	Header struct {
 		Name string
 		Site string
@@ -113,9 +139,7 @@ type data struct {
 		Content string
 	}
 	Static struct {
-		CSS   string
-		Fonts []struct {
-		}
+		CSS string
 	}
 }
 
@@ -125,6 +149,10 @@ func markdownify(s string) (string, error) {
 		return "", err
 	}
 	return b.String(), nil
+}
+
+func b64(b []byte) string {
+	return base64.URLEncoding.EncodeToString(b)
 }
 
 type verboseLogger struct {

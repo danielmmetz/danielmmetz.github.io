@@ -1,3 +1,24 @@
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(data:font/ttf;base64,{{.DMSansRegular | base64}}) format('truetype');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: url(data:font/ttf;base64,{{.DMSansBold | base64}}) format('truetype');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url(data:font/ttf;base64,{{.RedHatTextRegular | base64}}) format('truetype');
+}
 body {
   padding: 48px;
   max-width: 600px;
