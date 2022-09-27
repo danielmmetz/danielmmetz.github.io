@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>{{.Header.Name}}</title><meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    {{.Static.CSS}}
+    </style>
+</head>
+<body>
+  <h1>{{.Header.Name}}</h1>
+  {{.Header.Site | markdownify}}
+  <hr/>
+
+  <h1>Employment</h1>
+  <hr/>
+  {{ range .Employment -}}
+    <div class="container">
+        <h2>{{.Title}} @ {{ .Employer }}</h2> <p> {{.Time}} </p>
+    </div>
+        {{- range .Roles -}}
+            <h3> {{ .Title }} </h3>
+            {{- .Content | markdownify -}}
+        {{ end }}
+  {{- end -}}
+
+  <h1 class="section-header">Education</h1>
+  <hr/>
+  <div class="container">
+      <p>{{.Education.School}}</p>
+      <p>{{.Education.Time}}</p>
+  </div>
+  {{- .Education.Content | markdownify -}}
+
+  {{ range .Extras -}}
+  <h1 class="section-header">{{.Title}}</h1>
+  <hr/>
+  {{- .Content | markdownify -}}
+  {{- end -}}
+</body>
+</html>
