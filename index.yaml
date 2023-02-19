@@ -11,9 +11,26 @@ Employment:
       - Title: "Software Engineer"
         Time: "September 2016 - September 2018"
     Roles:
+      - Title: "Observability Experiences Lead"
+        Content: |
+          * Spinning up the team as we take ownership of existing observability systems
+            (logging, tracing, metrics, dashboards, and alerting).
+          * Soliciting feedback from across the company to identify unsupported workflows and poor experiences.
+          * Simplified and sped up our ability to roll-out tracing (and other changes) across our fleet by
+            improving our Kuberentes controller for sidecar injection. Developed its ability to
+            consistently ensure arbitrary mutations across existing resources.
+      - Title: "Platform Experiences Group Lead"
+        Content: |
+          * Partnered with Engineering Manager and Co-Lead on org design, weighing in on team charters and ownership boundaries.
+            Ensured smooth transition through mentorship, reviews, operational support, and knowledge transfer.
+          * Worked with each of the 3 teams on their roadmaps, weighing in on prioritzation within and across each team.
+          * Reduced system complexity, sped up the pod lifecycle, and eliminated redundant data pulls by
+            eliminating the need for a sidecar container in our runtime configuration system.
+          * Sped up our IDL release generation from ~60m to ~25m by rearchitecting its deployment model.
+            Made future improvements substantially easier by developing a better foundation.
       - Title: "Deploys Team lead"
         Content: |
-          * Leading multi-year effort to develop and drive wide adoption of safe, automatic production deploys.
+          * Led multi-year effort to develop and drive wide adoption of safe, automatic production deploys.
 
             Shifted culture. Identified requirements and collaborated with partner teams to ensure smooth rollout.
           * Created long-term high-impact roadmap for team. Contributed to cross-team roadmaps.
@@ -23,11 +40,9 @@ Employment:
 
             replaced existing uses of DynamoDB, SQS, an ETL, and HDFS w/ Hive/Presto.
           * Tech lead for cross-functional peak event preparation program. Set company-wide freeze guidance.
-
       - Title: "Brand Experience lead"
         Content: |
           * Implemented major changes to the Local Promotions platform,
-
             enabling Marketing team to quickly, reliably, and independently launch campaigns.
           * Integrated with experimentation platform to allow quanitfying each campaign's impact.
           * Served as interim engineering manager for 2 months.
