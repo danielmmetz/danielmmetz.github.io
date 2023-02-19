@@ -4,7 +4,12 @@ Header:
 Employment:
   - Title: "Staff Software Engineer"
     Employer: "Lyft"
-    Time: "September 2016 - Present"
+    Time: "March 2020 - Present"
+    PreviousTitles:
+      - Title: "Senior Software Engineer"
+        Time: "September 2018 - March 2020"
+      - Title: "Software Engineer"
+        Time: "September 2016 - September 2018"
     Roles:
       - Title: "Deploys Team lead"
         Content: |

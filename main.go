@@ -121,10 +121,14 @@ type htmlData struct {
 		Site string
 	}
 	Employment []struct {
-		Title    string
-		Employer string
-		Time     string
-		Roles    []struct {
+		Title          string
+		Employer       string
+		Time           string
+		PreviousTitles []struct {
+			Title string
+			Time  string
+		}
+		Roles []struct {
 			Title   string
 			Content string
 		}
