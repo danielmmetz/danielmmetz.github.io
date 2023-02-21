@@ -23,7 +23,7 @@ Employment:
           * Reduced complexity and sped up pod startup by eliminating the need
             for a sidecar container in our runtime configuration system.
           * Sped up our IDL release generation from ~60m to ~25m by rearchitecting its deployment model.
-      - Title: "Deploys Team lead"
+      - Title: "Deploys Team Lead"
         Content: |
           * Led multi-year effort to develop and drive wide adoption of safe, automatic production deploys.
 
