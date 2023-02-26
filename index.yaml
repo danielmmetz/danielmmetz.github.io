@@ -13,7 +13,10 @@ Employment:
     Roles:
       - Title: "Observability Experience Lead"
         Content: |
-          * Spinning up team to take ownership of logging, tracing, metrics, dashboards, and alerting.
+          * Spinning up team to take ownership of logging, tracing, metrics, dashboards, alerting, and profiling.
+            Developed and negotiated milestone-based transition plan between orgs.
+          * Wrote team vision, charter, and roadmap.
+            Designing plan for a European counter-part team.
           * Extended Kubernetes controller for sidecar injection to consistently
             ensure arbitrary mutations across fleet resources.
       - Title: "Platform Experiences Group Lead"
