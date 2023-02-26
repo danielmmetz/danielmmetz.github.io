@@ -22,10 +22,11 @@ Employment:
       - Title: "Platform Experiences Group Lead"
         Content: |
           * Partnered with Engineering Manager and Co-Lead on org design.
-            Worked with 3 teams on their charters and roadmaps.
+            Coached 3 teams on their charters and roadmaps.
           * Reduced complexity and sped up pod startup by eliminating the need
             for a sidecar container in our runtime configuration system.
-          * Sped up our IDL release generation from ~60m to ~25m by rearchitecting its deployment model.
+          * Sped up our IDL release generation enabling engineers to consumer their changes in ~25m (previously 60m)
+            by rearchitecting its deployment model.
       - Title: "Deploys Team Lead"
         Content: |
           * Led multi-year effort to develop and drive wide adoption of safe, automatic production deploys.
