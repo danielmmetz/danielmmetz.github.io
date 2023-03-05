@@ -24,12 +24,14 @@
         </div>
     {{ end }}
         {{- range .Roles -}}
-            <h3> {{ .Title }} </h3>
+            <div class="container">
+                <h3> {{ .Title }} </h3> <p> {{.Time}} </p>
+            </div>
             {{- .Content | markdownify -}}
         {{ end }}
   {{- end -}}
 
-  <h1 class="section-header">Education</h1>
+  <h1>Education</h1>
   <hr/>
   <div class="container">
       <p>{{.Education.School}}</p>
@@ -38,7 +40,7 @@
   {{- .Education.Content | markdownify -}}
 
   {{ range .Extras -}}
-  <h1 class="section-header">{{.Title}}</h1>
+  <h1>{{.Title}}</h1>
   <hr/>
   {{- .Content | markdownify -}}
   {{- end -}}

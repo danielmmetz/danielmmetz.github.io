@@ -7,6 +7,7 @@ Employment:
     Time: "September 2016 - Present"
     Roles:
       - Title: "Observability Experience Lead"
+        Time: "Janurary 2023 - Present"
         Content: |
           * Spinning up team to take ownership of logging, tracing, metrics, dashboards, alerting, and profiling.
             Developed and negotiated milestone-based transition plan between orgs.
@@ -15,32 +16,38 @@ Employment:
           * Extended Kubernetes controller for sidecar injection to consistently
             ensure arbitrary mutations across fleet resources.
       - Title: "Platform Experiences Group Lead"
+        Time: "April 2022 - January 2023"
         Content: |
           * Partnered with Engineering Manager and Co-Lead on org design.
             Coached 3 teams on their charters and roadmaps.
           * Reduced complexity and sped up pod startup by eliminating the need
             for a sidecar container in our runtime configuration system.
-          * Sped up our IDL release generation enabling engineers to consumer their changes in ~25m (previously 60m)
+          * Sped up our IDL release generation enabling engineers to consume their changes in ~25m (previously 60m)
             by rearchitecting its deployment model.
+          * Joined a Tiger Team effort to migrate a Kubernetes cluster from 1.16 to 1.22.
       - Title: "Deploys Team Lead"
+        Time: "June 2018 - April 2022"
         Content: |
           * Led multi-year effort to develop and drive wide adoption of safe, automatic production deploys.
 
             Shifted culture. Identified requirements and collaborated with partner teams to ensure smooth rollout.
           * Created long-term high-impact roadmap for team. Contributed to cross-team roadmaps.
-          * Key contributor to Kubernetes migration. Set forward architectural guidance.
+          * Key contributor to Kubernetes migrations. Set architectural guidance for supporting workloads of different types and privilege levels.
+          * Designed and executed on plan for migrating workloads into across AWS accounts.
           * Defined and implemented SOX compliance for deploy system. Advised on compliance for orchestration system.
           * Simplified data architecture and improved analytics by migrating to RDS;
 
             replaced existing uses of DynamoDB, SQS, an ETL, and HDFS w/ Hive/Presto.
           * Tech lead for cross-functional peak event preparation program. Set company-wide freeze guidance.
       - Title: "Brand Experience Lead"
+        Time: "April 2017 - June 2018"
         Content: |
           * Implemented major changes to the Local Promotions platform,
             enabling Marketing team to quickly, reliably, and independently launch campaigns.
           * Integrated with experimentation platform to allow quantifying each campaign's impact.
           * Served as interim engineering manager for 2 months.
       - Title: "Organic Growth"
+        Time: "September 2016 - April 2017"
         Content: |
           * Reduced customer acquisition cost of the Ambassador program by 54% (goal was ~20%).
 

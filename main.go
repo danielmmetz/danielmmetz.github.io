@@ -130,6 +130,7 @@ type htmlData struct {
 		}
 		Roles []struct {
 			Title   string
+			Time    string
 			Content string
 		}
 	}
