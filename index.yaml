@@ -4,12 +4,7 @@ Header:
 Employment:
   - Title: "Staff Software Engineer"
     Employer: "Lyft"
-    Time: "March 2020 - Present"
-    PreviousTitles:
-      - Title: "Senior Software Engineer"
-        Time: "September 2018 - March 2020"
-      - Title: "Software Engineer"
-        Time: "September 2016 - September 2018"
+    Time: "September 2016 - Present"
     Roles:
       - Title: "Observability Experience Lead"
         Content: |
@@ -39,7 +34,7 @@ Employment:
 
             replaced existing uses of DynamoDB, SQS, an ETL, and HDFS w/ Hive/Presto.
           * Tech lead for cross-functional peak event preparation program. Set company-wide freeze guidance.
-      - Title: "Brand Experience lead"
+      - Title: "Brand Experience Lead"
         Content: |
           * Implemented major changes to the Local Promotions platform,
             enabling Marketing team to quickly, reliably, and independently launch campaigns.
