@@ -23,15 +23,14 @@ Employment:
             Coached 3 teams on their charters and roadmaps.
           * Reduced complexity and sped up pod startup by eliminating the need
             for our runtime configuration system's sidecar container.
-          * Sped up our IDL release generation enabling engineers to consume their changes in ~25m (previously 60m)
-            by rearchitecting its deployment model.
+          * Sped up our IDL release process by over 2x (from 60m to 25m) by rearchitecting its deployment.
           * Joined a Tiger Team effort to migrate a Kubernetes cluster from 1.16 to 1.22.
       - Title: "Deploys Team Lead"
         Time: "June 2018 - April 2022"
         Content: |
-          * Led multi-year effort to develop and drive wide adoption of safe, automatic production deploys.
-
-            Shifted culture. Identified requirements and collaborated with partner teams to ensure smooth rollout.
+          * Led multi-year effort to develop and drive adoption of
+            [safe, automatic production deploys](https://eng.lyft.com/continuous-deployment-at-lyft-9b457314771a)
+            across 90% of services. Identified requirements and collaborated with partner teams to shift culture.
           * Created long-term high-impact roadmap for team. Contributed to cross-team roadmaps.
           * Key contributor to Kubernetes migrations. Set architectural guidance for supporting workloads of different types and privilege levels.
           * Designed and executed on plan for migrating workloads across AWS accounts.
