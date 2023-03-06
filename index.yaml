@@ -71,3 +71,6 @@ Extras:
       * Go, Python
       * DynamoDB, PostgreSQL (RDS), SQS, MongoDB, Redis
       * Kubernetes, Docker, Envoy
+PDF:
+  MarginTop: 0.5
+  MarginBottom: 1.0

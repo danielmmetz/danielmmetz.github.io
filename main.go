@@ -11,6 +11,8 @@ import (
 	"os/signal"
 	"text/template"
 
+	"github.com/chromedp/cdproto/page"
+	"github.com/chromedp/chromedp"
 	"github.com/ghodss/yaml"
 	"github.com/tdewolff/minify/v2"
 	"github.com/tdewolff/minify/v2/css"
@@ -39,11 +41,12 @@ func main() {
 	}
 }
 
-func mainE(_ context.Context) error {
+func mainE(ctx context.Context) error {
 	templatePath := flag.String("template", "", "path to template file")
 	contentPath := flag.String("content", "", "path to content file")
 	verbose := flag.Bool("verbose", false, "if true, print eggregiously")
 	shrink := flag.Bool("minify", false, "if true, minify output")
+	pdf := flag.Bool("pdf", false, "if true, write pdf instead of html")
 	flag.Parse()
 
 	logger := verboseLogger{enabled: *verbose}
@@ -78,7 +81,7 @@ func mainE(_ context.Context) error {
 	if err != nil {
 		return fmt.Errorf("reading content file: %s: %w", *contentPath, err)
 	}
-	var d htmlData
+	var d content
 	if err := yaml.Unmarshal(contentB, &d); err != nil {
 		return fmt.Errorf("parsing content: %w", err)
 	}
@@ -105,7 +108,33 @@ func mainE(_ context.Context) error {
 		}
 		out = b
 	}
-	fmt.Println(out.String())
+	if !*pdf {
+		fmt.Println(out.String())
+		return nil
+	}
+
+	f, err := os.CreateTemp("", "*.html")
+	if err != nil {
+		return fmt.Errorf("creating temp file: %w", err)
+	}
+	defer os.Remove(f.Name())
+
+	if _, err := f.Write(out.Bytes()); err != nil {
+		return fmt.Errorf("writing temp file: %w", err)
+	}
+	if err := f.Close(); err != nil {
+		return fmt.Errorf("closing temp file: %w", err)
+	}
+
+	ctx, cancel := chromedp.NewContext(ctx, chromedp.WithLogf(logger.Printf))
+	defer cancel()
+
+	var pdfBuffer []byte
+	grabber := pdfGrabber(fmt.Sprintf("file://%s", f.Name()), "body", &pdfBuffer, d.PDF.MarginTop, d.PDF.MarginBottom)
+	if err := chromedp.Run(ctx, grabber); err != nil {
+		return fmt.Errorf("generating pdf: %w", err)
+	}
+	fmt.Printf("%s", pdfBuffer)
 	return nil
 }
 
@@ -115,7 +144,7 @@ type cssData struct {
 	RedHatTextRegular []byte
 }
 
-type htmlData struct {
+type content struct {
 	Header struct {
 		Name string
 		Site string
@@ -146,6 +175,10 @@ type htmlData struct {
 	Static struct {
 		CSS string
 	}
+	PDF struct {
+		MarginTop    float64
+		MarginBottom float64
+	}
 }
 
 func markdownify(s string) (string, error) {
@@ -164,16 +197,32 @@ type verboseLogger struct {
 	enabled bool
 }
 
-func (l verboseLogger) Printf(format string, a ...any) (n int, err error) {
+func (l verboseLogger) Printf(format string, a ...any) {
 	if !l.enabled {
-		return 0, nil
+		return
 	}
-	return fmt.Fprintf(os.Stderr, format, a...)
+	fmt.Fprintf(os.Stderr, format, a...)
 }
 
-func (l verboseLogger) Println(a ...any) (n int, err error) {
+func (l verboseLogger) Println(a ...any) {
 	if !l.enabled {
-		return 0, nil
+		return
 	}
-	return fmt.Fprintln(os.Stderr, a...)
+	fmt.Fprintln(os.Stderr, a...)
+}
+
+// pdfGrabber is largely taken from https://stackoverflow.com/a/68796203.
+func pdfGrabber(url string, sel string, res *[]byte, topMargin, bottomMargin float64) chromedp.Tasks {
+	return chromedp.Tasks{
+		chromedp.Navigate(url),
+		chromedp.WaitVisible(sel, chromedp.ByQuery),
+		chromedp.ActionFunc(func(ctx context.Context) error {
+			buf, _, err := page.PrintToPDF().WithMarginTop(topMargin).WithMarginBottom(bottomMargin).Do(ctx)
+			if err != nil {
+				return err
+			}
+			*res = buf
+			return nil
+		}),
+	}
 }
