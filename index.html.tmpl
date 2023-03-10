@@ -9,7 +9,10 @@
 </head>
 <body>
   <h1>{{.Header.Name}}</h1>
-  {{.Header.Site | markdownify}}
+  <div class="container">
+    {{.Header.Email}}
+    {{.Header.Site | markdownify}}
+  </div>
   <hr/>
 
   <h1>Employment</h1>
