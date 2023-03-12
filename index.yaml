@@ -5,10 +5,10 @@ Header:
 Employment:
   - Title: "Staff Software Engineer"
     Employer: "Lyft"
-    Time: "September 2016 - Present"
+    Time: "September 2016 – Present"
     Roles:
       - Title: "Observability Experience Lead"
-        Time: "January 2023 - Present"
+        Time: "January 2023 – Present"
         Content: |
           * Currently spinning up team to take ownership of
             logging, tracing, metrics, dashboards, alerting, and profiling.
@@ -18,7 +18,7 @@ Employment:
           * Extended Kubernetes controller for sidecar injection to consistently
             ensure arbitrary mutations across fleet resources.
       - Title: "Platform Experiences Group Lead"
-        Time: "April 2022 - January 2023"
+        Time: "April 2022 – January 2023"
         Content: |
           * Partnered with Engineering Manager and Co-Lead on org design.
             Coached 3 teams on their charters and roadmaps.
@@ -27,7 +27,7 @@ Employment:
           * Sped up our IDL release process by over 2x (from 60m to 25m) by rearchitecting its deployment.
           * Joined a Tiger Team effort to migrate a Kubernetes cluster from 1.16 to 1.22.
       - Title: "Deploys Team Lead"
-        Time: "June 2018 - April 2022"
+        Time: "June 2018 – April 2022"
         Content: |
           * Led multi-year effort to develop and drive adoption of
             [safe, automatic production deploys](https://eng.lyft.com/continuous-deployment-at-lyft-9b457314771a)
@@ -42,21 +42,21 @@ Employment:
             replaced existing uses of DynamoDB, SQS, an ETL process, and HDFS w/ Hive/Presto.
           * Tech lead for cross-functional peak event preparation program. Set company-wide freeze guidance.
       - Title: "Brand Experience Lead"
-        Time: "April 2017 - June 2018"
+        Time: "April 2017 – June 2018"
         Content: |
           * Implemented major changes to the Local Promotions platform,
             enabling the Marketing team to quickly, reliably, and independently launch campaigns.
           * Integrated with an experimentation platform to permit per-campaign impact monitoring.
           * Served as interim engineering manager for 2 months.
       - Title: "Organic Growth"
-        Time: "September 2016 - April 2017"
+        Time: "September 2016 – April 2017"
         Content: |
           * Reduced customer acquisition cost of the Ambassador program by 54% (goal was ~20%).
 
             Identified multi-pronged approach and led implementation.
 Education:
   School: "Pomona College"
-  Time: "Fall 2012 - Spring 2016"
+  Time: "Fall 2012 – Spring 2016"
   Content: |
     * B.A. in Mathematics, Computer Science | GPA 3.75
 Extras:
