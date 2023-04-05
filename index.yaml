@@ -7,7 +7,7 @@ Employment:
     Employer: "Lyft"
     Time: "September 2016 – Present"
     Roles:
-      - Title: "Observability Experience Lead"
+      - Title: "Observability Experience Tech Lead"
         Time: "January 2023 – Present"
         Content: |
           * Currently spinning up team to take ownership of
@@ -17,7 +17,7 @@ Employment:
             Designing plan for a European counterpart team.
           * Extended Kubernetes controller for sidecar injection to consistently
             ensure arbitrary mutations across fleet resources.
-      - Title: "Platform Experiences Group Lead"
+      - Title: "Platform Experiences Group Tech Lead"
         Time: "April 2022 – January 2023"
         Content: |
           * Partnered with Engineering Manager and Co-Lead on org design.
@@ -26,7 +26,7 @@ Employment:
             for our runtime configuration system's sidecar container.
           * Sped up our IDL release process by over 2x (from 60m to 25m) by rearchitecting its deployment.
           * Joined a Tiger Team effort to migrate a Kubernetes cluster from 1.16 to 1.22.
-      - Title: "Deploys Team Lead"
+      - Title: "Deploys Team Tech Lead"
         Time: "June 2018 – April 2022"
         Content: |
           * Led multi-year effort to develop and drive adoption of
@@ -41,7 +41,7 @@ Employment:
 
             replaced existing uses of DynamoDB, SQS, an ETL process, and HDFS w/ Hive/Presto.
           * Tech lead for cross-functional peak event preparation program. Set company-wide freeze guidance.
-      - Title: "Brand Experience Lead"
+      - Title: "Brand Experience Tech Lead"
         Time: "April 2017 – June 2018"
         Content: |
           * Implemented major changes to the Local Promotions platform,
