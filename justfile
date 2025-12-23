@@ -1,7 +1,9 @@
-all: html pdf
+all: resume-html resume-pdf
 
-html:
-    go run main.go -template index.html.tmpl -content index.yaml -minify > index.html
+[working-directory: 'resume']
+resume-html:
+    go run main.go -template index.html.tmpl -content index.yaml -minify > ../docs/index.html
 
-pdf:
-    go run main.go -template index.html.tmpl -content index.yaml -minify -pdf > resume.pdf
+[working-directory: 'resume']
+resume-pdf:
+    go run main.go -template index.html.tmpl -content index.yaml -minify -pdf > ../docs/resume.pdf
