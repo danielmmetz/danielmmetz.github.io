@@ -1,0 +1,18 @@
+languageCode = 'en-us'
+title = 'Daniel Metz'
+author = 'Daniel Metz'
+theme = 'hugo-bearblog'
+enableRobotsTXT = true
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[params]
+  favicon = "static/favicon.ico"
+  title = "Daniel Metz"
+  hideMadeWithLine = true
+
+[markup]
+  [markup.highlight]
+    style = 'friendly'
+    lineNumbersInTable = false
+    codeFences = true
