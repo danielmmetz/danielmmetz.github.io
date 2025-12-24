@@ -15,4 +15,4 @@ hugo-build:
 
 [working-directory: 'home']
 hugo-dev:
-    hugo server --buildDrafts --disableFastRender
+    hugo server --buildDrafts --disableFastRender --destination ../docs
