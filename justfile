@@ -2,7 +2,7 @@ all: resume-html resume-pdf hugo-build
 
 [working-directory: 'resume']
 resume-html:
-    go run main.go -template index.html.tmpl -content index.yaml -minify >> ../home/static/resume/index.html
+    go run main.go -template index.html.tmpl -content index.yaml -minify > ../home/static/resume/index.html
 
 [working-directory: 'resume']
 resume-pdf:
