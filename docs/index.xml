@@ -1,1 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Daniel Metz</title><link>/</link><description>Recent content in Home on Daniel Metz</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Test Post</title><link>/posts/markdown-syntax/</link><pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/markdown-syntax/</guid><description>&lt;p&gt;Just a simple test post.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Daniel Metz</title><link>/</link><description>Recent content in Home on Daniel Metz</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>A Guide to Code Review</title><link>/posts/code-review/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/code-review/</guid><description>&lt;h1 id="a-guide-to-code-review"&gt;
+ A Guide to Code Review
+ &lt;a href="#a-guide-to-code-review"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Document Goals:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is generally documents how I do, and think about, code reviews. Please consider it to be &lt;em&gt;a&lt;/em&gt; resource you can use as you think about, and conduct, your own code reviews. I would be delighted if it helps you up-level the quality of reviews you’re providing.&lt;/p&gt;
+&lt;p&gt;That said, please do not take this as a “Law of Code Review”, nor even a comprehensive guide. There are very well other ways to go about code reviews and other things to consider.&lt;/p&gt;</description></item><item><title>Recommended Resources</title><link>/posts/recommended-resources/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/recommended-resources/</guid><description>&lt;h1 id="recommended-resources"&gt;
+ Recommended Resources
+ &lt;a href="#recommended-resources"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="generally-useful"&gt;
+ Generally Useful:
+ &lt;a href="#generally-useful"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://dave.cheney.net/2015/11/05/lets-talk-about-logging"&gt;Let’s Talk about Logging&lt;/a&gt;: log an error or return an error, but do not do both
+&lt;ul&gt;
+&lt;li&gt;Simpler: &lt;a href="https://github.com/uber-go/guide/blob/master/style.md#handle-errors-once"&gt;https://github.com/uber-go/guide/blob/master/style.md#handle-errors-once&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://jvns.ca/blog/2022/12/08/a-debugging-manifesto/"&gt;Julia Evan’s Debugging Manifesto&lt;/a&gt;: a great general debugging guide. In particular, I’m a fan of “trust nobody and nothing”&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://zachholman.com/talk/utc-is-enough-for-everyone-right"&gt;UTC Is Enough For Everyone, Right?&lt;/a&gt;: a fun explainer on how time is really hard&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/"&gt;Notes on Structured Concurrency, or Go Statement Considered Harmful&lt;/a&gt;: a post written to be “incendiary”, but really makes a good case for proper ownership and lifetime management of (concurrent) resources.
+&lt;ul&gt;
+&lt;li&gt;Generalized: on resource lifecycle management:
+&lt;ul&gt;
+&lt;li&gt;if you created a resource, you’re responsible for its lifecycle&lt;/li&gt;
+&lt;li&gt;if you were given a reference to a resource, you are &lt;em&gt;not&lt;/em&gt; responsible for its lifecycle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="for-go"&gt;
+ For Go:
+ &lt;a href="#for-go"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://go.dev/tour/"&gt;A Tour of Go&lt;/a&gt; for an introduction to the Language&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://go.dev/doc/effective_go"&gt;Effective Go&lt;/a&gt; covers some good idioms/conventions&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gobyexample.com/"&gt;Go by Example&lt;/a&gt; is useful for little snippets of common needs&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=5zXAHh5tJqQ"&gt;Rethinking Classical Concurrency Patterns&lt;/a&gt; really, really good talk about how to think about concurrency in Go&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully"&gt;Don&amp;rsquo;t just check errors, handle them gracefully&lt;/a&gt;: errors are part of your API surface; consider not having, or relying upon, sentinel errors.
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;for wrapping them, consider the following from The Go Programming Language:&lt;/p&gt;</description></item></channel></rss>
