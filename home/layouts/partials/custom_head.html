@@ -1,13 +1,13 @@
 <style>
-    h2,
-    h3,
-    h4 {
+    main h2,
+    main h3,
+    main h4 {
         position: relative;
     }
 
-    h2:hover::before,
-    h3:hover::before,
-    h4:hover::before {
+    main h2:hover::before,
+    main h3:hover::before,
+    main h4:hover::before {
         content: "#";
         position: absolute;
         left: -1em;
@@ -15,16 +15,16 @@
         color: var(--link-color);
     }
 
-    h2 a,
-    h3 a,
-    h4 a {
+    main h2 a,
+    main h3 a,
+    main h4 a {
         color: var(--heading-color);
         text-decoration: none;
     }
 
-    h2 a:is(:hover, :focus, :visited),
-    h3 a:is(:hover, :focus, :visited),
-    h4 a:is(:hover, :focus, :visited) {
+    main h2 a:is(:hover, :focus, :visited),
+    main h3 a:is(:hover, :focus, :visited),
+    main h4 a:is(:hover, :focus, :visited) {
         text-decoration: none;
     }
 </style>
