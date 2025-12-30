@@ -1,0 +1,18 @@
+{{ define "main" }}
+<content>
+  {{/* Render the body</content> content of the section (_index.html/_index.md) */}}
+  {{ .Content }}
+
+  {{/* If there are child pages, render a simple list.
+      Do not include any fallback text like "No posts yet". */}}
+  {{ with .Pages }}
+    {{ if gt (len .) 0 }}
+      <ul class="resume-children">
+        {{ range .ByWeight }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
+</content>
+{{ end }}
