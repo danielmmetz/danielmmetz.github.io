@@ -1,5 +1,5 @@
 +++
 title = "Posts"
 menu = "main"
-weight = 100
+weight = 10
 +++

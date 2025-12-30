@@ -16,3 +16,10 @@ ignoreErrors = ["error-disable-taxonomy"]
     style = 'friendly'
     lineNumbersInTable = false
     codeFences = true
+
+[menu]
+  [[menu.main]]
+    identifier = "resume"
+    name = "Résumé"
+    url = "/resume/"
+    weight = 20
