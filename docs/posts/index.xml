@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Daniel Metz</title><link>/posts/</link><description>Recent content in Posts on Daniel Metz</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>A Guide to Code Review</title><link>/posts/code-review/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/code-review/</guid><description>&lt;h1 id="a-guide-to-code-review"&gt;
  A Guide to Code Review
- &lt;a href="#a-guide-to-code-review"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Document Goals:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is generally documents how I do, and think about, code reviews. Please consider it to be &lt;em&gt;a&lt;/em&gt; resource you can use as you think about, and conduct, your own code reviews. I would be delighted if it helps you up-level the quality of reviews you’re providing.&lt;/p&gt;
 &lt;p&gt;That said, please do not take this as a “Law of Code Review”, nor even a comprehensive guide. There are very well other ways to go about code reviews and other things to consider.&lt;/p&gt;</description></item><item><title>Recommended Resources</title><link>/posts/recommended-resources/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/recommended-resources/</guid><description>&lt;h1 id="recommended-resources"&gt;
  Recommended Resources
- &lt;a href="#recommended-resources"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;h2 id="generally-useful"&gt;
- Generally Useful:
- &lt;a href="#generally-useful"&gt;#&lt;/a&gt;
+ &lt;a href="#generally-useful"&gt;Generally Useful:&lt;/a&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://dave.cheney.net/2015/11/05/lets-talk-about-logging"&gt;Let’s Talk about Logging&lt;/a&gt;: log an error or return an error, but do not do both
@@ -32,8 +29,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="for-go"&gt;
- For Go:
- &lt;a href="#for-go"&gt;#&lt;/a&gt;
+ &lt;a href="#for-go"&gt;For Go:&lt;/a&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://go.dev/tour/"&gt;A Tour of Go&lt;/a&gt; for an introduction to the Language&lt;/li&gt;

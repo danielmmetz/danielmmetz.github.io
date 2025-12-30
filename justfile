@@ -12,6 +12,7 @@ resume-pdf:
 hugo-build:
     rm -r ../docs/*
     hugo build --minify --destination ../docs
+    echo 'www.danielmmetz.com\n' > ../docs/CNAME
 
 [working-directory: 'home']
 hugo-dev:
