@@ -146,9 +146,10 @@ type cssData struct {
 
 type content struct {
 	Header struct {
-		Name  string
-		Email string
-		Site  string
+		Name   string
+		Email  string
+		Site   string
+		Github string
 	}
 	Employment []struct {
 		Title          string

@@ -23,3 +23,8 @@ ignoreErrors = ["error-disable-taxonomy"]
     name = "Résumé"
     url = "/resume/"
     weight = 20
+  [[menu.main]]
+      identifier = "github"
+      name = "GitHub"
+      url = "https://github.com/danielmmetz"
+      weight = 20
