@@ -11,13 +11,14 @@ Employment:
       - Title: "Storage Platform Team"
         Time: "June 2025 – Present"
         Content: |
-          * Improved safety and reduced toil by automating database shadowing
-            during failover operations. Enabling concurrent database upgrades with
-            programmatic traffic ramping, health validation, and teardown.
+          * Improved safety and reduced toil by automating shadowing during
+            database failover operations (PostgresQL on RDS). Enabled concurrent
+            database upgrades with programmatic traffic ramping, health
+            validation, and teardown.
       - Title: "Deploys Team Tech Lead"
         Time: "January 2023 – June 2025"
         Content: |
-          * Led designed, development, and wide adoption of a new configurable
+          * Led design, development, and wide adoption of a new configurable
             continuous deployment platform that federated deploy ownership to
             individual teams with automated monitoring, and rollbacks.
           * Eliminated a class of SEV-0 incidents by leading the deprecation of blue-green
