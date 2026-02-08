@@ -1,20 +1,36 @@
 Header:
   Name: "Daniel Metz"
   Email: "danielmmetz@gmail.com"
-  Site: "[github.com/danielmmetz](https://github.com/danielmmetz)"
+  Site: "[danielmmetz.com](https://www.danielmmetz.com)"
 Employment:
   - Title: "Staff Software Engineer"
+    Employer: "Figma"
+    Time: "June 2023 – Present"
+    Roles:
+      - Title: "Storage Platform Team"
+        Time: "June 2025 – Present"
+        Content: |
+          * Improved safety and reduced toil by automating database shadowing
+            during failover operations. Enabling concurrent database upgrades with
+            programmatic traffic ramping, health validation, and teardown.
+      - Title: "Deploys Team Tech Lead"
+        Time: "January 2023 – June 2025"
+        Content: |
+          * Led designed, development, and wide adoption of a new configurable
+            continuous deployment platform that federated deploy ownership to
+            individual teams with automated monitoring, and rollbacks.
+          * Eliminated a class of SEV-0 incidents by leading the deprecation of blue-green
+            deploys in favor of rolling deployments, reducing deploy complexity and
+            cutting deploy-induced compute costs by 10-15%.
+  - Title: "Staff Software Engineer"
     Employer: "Lyft"
-    Time: "September 2016 – Present"
+    Time: "September 2016 – May 2023"
     Roles:
       - Title: "Observability Experience Tech Lead"
-        Time: "January 2023 – Present"
+        Time: "January 2023 – May 2023"
         Content: |
-          * Currently spinning up team to take ownership of
-            logging, tracing, metrics, dashboards, alerting, and profiling.
-            Developed and negotiated milestone-based transition plan between orgs.
-          * Authored team vision, charter, and roadmap.
-            Designing plan for a European counterpart team.
+          * Spun up a new team owning logging, tracing, metrics, dashboards, alerting,
+            and profiling. Authored team vision, charter, and roadmap.
           * Extended Kubernetes controller for sidecar injection to consistently
             ensure arbitrary mutations across fleet resources.
       - Title: "Platform Experiences Group Tech Lead"
@@ -22,38 +38,15 @@ Employment:
         Content: |
           * Partnered with Engineering Manager and Co-Lead on org design.
             Coached 3 teams on their charters and roadmaps.
-          * Reduced complexity and sped up pod startup by eliminating the need
-            for our runtime configuration system's sidecar container.
-          * Sped up our IDL release process by over 2x (from 60m to 25m) by rearchitecting its deployment.
-          * Joined a Tiger Team effort to migrate a Kubernetes cluster from 1.16 to 1.22.
+          * Sped up IDL release process by over 2x (from 60m to 25m) by rearchitecting its deployment.
       - Title: "Deploys Team Tech Lead"
         Time: "June 2018 – April 2022"
         Content: |
           * Led multi-year effort to develop and drive adoption of
             [safe, automatic production deploys](https://eng.lyft.com/continuous-deployment-at-lyft-9b457314771a)
             across 90% of services. Identified requirements and collaborated with partner teams to shift culture.
-          * Created long-term high-impact roadmap for team. Contributed to cross-team roadmaps.
-          * Key contributor to Kubernetes migrations. Set architectural guidance for supporting workloads of different types and privilege levels.
-          * Designed and executed on plan for migrating workloads across AWS accounts.
           * Defined and implemented SOX compliance for the deployment system.
-            Advised on compliance for the orchestration system.
-          * Simplified data architecture and improved analytics by migrating to RDS;
-
-            replaced existing uses of DynamoDB, SQS, an ETL process, and HDFS w/ Hive/Presto.
-          * Tech lead for cross-functional peak event preparation program. Set company-wide freeze guidance.
-      - Title: "Brand Experience Tech Lead"
-        Time: "April 2017 – June 2018"
-        Content: |
-          * Implemented major changes to the Local Promotions platform,
-            enabling the Marketing team to quickly, reliably, and independently launch campaigns.
-          * Integrated with an experimentation platform to permit per-campaign impact monitoring.
-          * Served as interim engineering manager for 2 months.
-      - Title: "Organic Growth"
-        Time: "September 2016 – April 2017"
-        Content: |
-          * Reduced customer acquisition cost of the Ambassador program by 54% (goal was ~20%).
-
-            Identified multi-pronged approach and led implementation.
+          * Tech lead for cross-functional peak event preparation program.
 Education:
   School: "Pomona College"
   Time: "Fall 2012 – Spring 2016"
@@ -70,8 +63,8 @@ Extras:
   - Title: "Languages and Technologies"
     Content: |
       * Go, Python
-      * DynamoDB, PostgreSQL (RDS), SQS, MongoDB, Redis
-      * Kubernetes, Docker, Envoy
+      * PostgreSQL (RDS), DynamoDB, SQS, MongoDB, Redis
+      * Kubernetes, Docker, Envoy, Temporal
 PDF:
   MarginTop: 0.5
   MarginBottom: 1.0
