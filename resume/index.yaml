@@ -57,7 +57,8 @@ Education:
 Extras:
   - Title: "Side Projects"
     Content: |
-      * [personal site](https://www.danielmmetz.com/posts/) featuring posts like [A Guide to Code Review](https://www.danielmmetz.com/posts/code-review/)
+      * [personal site](https://www.danielmmetz.com/posts/): featuring posts like [A Guide to Code Review](https://www.danielmmetz.com/posts/code-review/)
+      * [recipes app](https://recipes.danielmmetz.com/): custom made web app (and it's [open source](https://github.com/danielmmetz/recipes))
       * [settle](https://www.github.com/danielmmetz/settle): a custom dotfiles manager
   - Title: "Awards"
     Content: |
