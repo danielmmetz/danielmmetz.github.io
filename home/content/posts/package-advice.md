@@ -1,11 +1,11 @@
 
 +++
-title = "Package Advice"
+title = "Advice on Developing Packages in Go"
 date = "2026-02-16"
-description = "Advice on developing packages in Go"
+description = "Advice on Developing Packages in Go"
 +++
 
-# Advice on developing packages in Go
+# Advice on Developing Packages in Go
 
 Before digging into organizing packages, let's start with a very brief primer
 on [packages and modules](https://go.dev/ref/mod).
