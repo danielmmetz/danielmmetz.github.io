@@ -14,7 +14,12 @@ Employment:
           * Improved safety and reduced toil by automating shadowing during
             database failover operations (PostgresQL on RDS). Enabled concurrent
             database upgrades with programmatic traffic ramping, health
-            validation, and teardown.
+            validation, and teardown. Together these eliminated a class of SEV-0 incidents,
+            eliminated several hours of toil and interrupt per failover,
+            and further reduced failover wall-clock time.
+          * Mentored senior teammates across technical excellence and organizational success.
+            Started recurring team teach and share meetings.
+            Improved team design and review processes.
       - Title: "Deploys Team Tech Lead"
         Time: "January 2023 – June 2025"
         Content: |
@@ -57,7 +62,9 @@ Education:
 Extras:
   - Title: "Side Projects"
     Content: |
-      * [personal site](https://www.danielmmetz.com/posts/): featuring posts like [A Guide to Code Review](https://www.danielmmetz.com/posts/code-review/)
+      * [personal site](https://www.danielmmetz.com/posts/): featuring posts like
+          * [A Guide to Code Review](https://www.danielmmetz.com/posts/code-review/) and
+          * [Advice on Developing Packages](https://www.danielmmetz.com/posts/package-advice/)
       * [recipes app](https://recipes.danielmmetz.com/): custom made web app (and it's [open source](https://github.com/danielmmetz/recipes))
       * [settle](https://www.github.com/danielmmetz/settle): a custom dotfiles manager
   - Title: "Awards"
