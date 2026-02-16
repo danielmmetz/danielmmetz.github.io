@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Daniel Metz</title><link>/posts/</link><description>Recent content in Posts on Daniel Metz</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>A Guide to Code Review</title><link>/posts/code-review/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/code-review/</guid><description>&lt;h1 id="a-guide-to-code-review"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Daniel Metz</title><link>/posts/</link><description>Recent content in Posts on Daniel Metz</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 16 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Package Advice</title><link>/posts/package-advice/</link><pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate><guid>/posts/package-advice/</guid><description>&lt;h1 id="advice-on-developing-packages-in-go"&gt;
+ Advice on developing packages in Go
+&lt;/h1&gt;
+&lt;p&gt;Before digging into organizing packages, let&amp;rsquo;s start with a very brief primer
+on &lt;a href="https://go.dev/ref/mod"&gt;packages and modules&lt;/a&gt;.
+A &lt;strong&gt;package&lt;/strong&gt; is a collection of source files that are grouped together.
+A &lt;strong&gt;module&lt;/strong&gt; is a collection of packages that are versioned together.
+We&amp;rsquo;re going to focus on packages, largely leaving modules out of scope.&lt;/p&gt;
+&lt;h2 id="what-does-a-package-offer"&gt;
+ &lt;a href="#what-does-a-package-offer"&gt;What does a package offer?&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;A package offers two main things: namespacing and an enforced boundary (by limiting access to exported members). To quickly define each:&lt;/p&gt;</description></item><item><title>A Guide to Code Review</title><link>/posts/code-review/</link><pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate><guid>/posts/code-review/</guid><description>&lt;h1 id="a-guide-to-code-review"&gt;
  A Guide to Code Review
 &lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Document Goals:&lt;/strong&gt;&lt;/p&gt;
