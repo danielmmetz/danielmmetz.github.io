@@ -65,8 +65,9 @@ Extras:
       * [personal site](https://www.danielmmetz.com/posts/): featuring posts like
           * [A Guide to Code Review](https://www.danielmmetz.com/posts/code-review/) and
           * [Advice on Developing Packages](https://www.danielmmetz.com/posts/package-advice/)
-      * [recipes app](https://recipes.danielmmetz.com/): custom made web app (and it's [open source](https://github.com/danielmmetz/recipes))
       * extended [tinyauth](https://github.com/steveiliop56/tinyauth) to [support dynamic ip allowlisting](https://github.com/danielmmetz/tinyauth/tree/63770ee897b39d4b06bfc3b58af6ef0b863bdcbd) ([see proposal discussion](https://github.com/steveiliop56/tinyauth/discussions/648))
+      * [recipes app](https://recipes.danielmmetz.com/): custom made web app (and it's [open source](https://github.com/danielmmetz/recipes))
+      * [hacker news client](https://hn.danielmmetz.com/) designed for offline access (and it's [open source](https://github.com/danielmmetz/hn-client))
       * [settle](https://www.github.com/danielmmetz/settle): a custom dotfiles manager
   - Title: "Awards"
     Content: |
